@@ -33,6 +33,7 @@ type Config struct {
 	DtrackManageProjectActiveStatus  bool     `yaml:"dtrackManageProjectActiveStatus" env:"SBOM_DTRACK_MANAGE_PROJECT_ACTIVE_STATUS" flag:"dtrack-manage-project-active-status"`
 	DtrackKubernetesClusterIdMode    string   `yaml:"dtrackKubernetesClusterIdMode" env:"SBOM_DTRACK_KUBERNETES_CLUSTER_ID_MODE" flag:"dtrack-kubernetes-cluster-id-mode"`
 	DtrackTemplatedProjectName       string   `yaml:"dtrackTemplatedProjectName" env:"SBOM_DTRACK_TEMPLATED_PROJECT_NAME" flag:"dtrack-templated-project-name"`
+	DtrackTrackDeploymentTimestamps  bool     `yaml:"dtrackTrackDeploymentTimestamps" env:"SBOM_DTRACK_TRACK_DEPLOYMENT_TIMESTAMPS" flag:"dtrack-track-deployment-timestamps"`
 	KubernetesClusterId              string   `yaml:"kubernetesClusterId" env:"SBOM_KUBERNETES_CLUSTER_ID" flag:"kubernetes-cluster-id"`
 	JobImage                         string   `yaml:"jobImage" env:"SBOM_JOB_IMAGE" flag:"job-image"`
 	JobImagePullSecret               string   `yaml:"jobImagePullSecret" env:"SBOM_JOB_IMAGE_PULL_SECRET" flag:"job-image-pull-secret"`
@@ -83,6 +84,7 @@ var (
 	ConfigKeyDependencyTrackManageProjectActiveStatus        = "dtrack-manage-project-active-status"
 	ConfigKeyDtrackTemplatedProjectName                      = "dtrack-templated-project-name"
 	ConfigKeyKubernetesClusterId                             = "kubernetes-cluster-id"
+	ConfigKeyDtrackTrackDeploymentTimestamps                 = "dtrack-track-deployment-timestamps"
 	ConfigKeyJobImage                                        = "job-image"
 	ConfigKeyFetchOciAttestations                            = "fetch-oci-attestations"
 	ConfigKeyInsecureHttpRegistry                            = "insecure-http-registry"
